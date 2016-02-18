@@ -1,0 +1,14 @@
+{
+  "/user/": {
+    "POST": {
+      "route": "create",
+      "policy": []
+    }
+  },
+  "/user-login" : {
+    "POST": {
+      "route": "authenticate",
+      "policy": []
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "postgres" : {
+        "master" : "postgres://postgres:123456@localhost/pretr-shop",
+        "slave"  : "postgres://postgres:123456@localhost/pretr-shop"
+    },
+    "mongo" : {
+        "master" : "mongodb://localhost:27017/pretr-shop",
+        "slave"  : "mongodb://localhost:27017/pretr-shop"
+    }
+}

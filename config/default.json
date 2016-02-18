@@ -1,0 +1,58 @@
+{
+	"app": {
+		"secret": "Ashesh ",
+		"issuer": "api.hosty.in",
+		"cryptoAlgorithm": "aes-256-ctr",
+		"uploads": {
+			"folder": "./uploads",
+			"profile": {
+				"maxSize": 2
+			},
+			"cover": {
+				"maxSize": 3
+			},
+			"csv": {
+				"maxSize": 100,
+				"acceptedFileTypes": ["text/plain", "text/csv"]
+			}
+		},
+		"auth": {
+			"issuer": "api.hosty.in",
+			"expires": 1440
+		},
+		"logger": {
+			"files": {
+				"info": {
+					"name": "info-logs",
+					"path": "./log/hosty.info.log"
+				},
+				"error": {
+					"name": "error-logs",
+					"path": "./log/hosty.error.log"
+				},
+				"debug": {
+					"name": "debug-logs",
+					"path": "./log/hosty.debug.log"
+				}
+			}
+		}
+	},
+	"server": {
+		"port": 3000
+	},
+	"database": {
+		"mongo": "mongodb://127.0.0.1/stylecast",
+		"redis" : {
+			"host": "127.0.0.1",
+			"port": 6379
+		},
+		"postgres" : {
+	        "master" : "postgres://postgres:123456@localhost/oms",
+	        "slave"  : "postgres://postgres:123456@localhost/oms"
+	    },
+	    "mongo" : {
+	        "master" : "mongodb://localhost:27017/pretr-shop",
+	        "slave"  : "mongodb://localhost:27017/pretr-shop"
+	    }
+	}
+}
