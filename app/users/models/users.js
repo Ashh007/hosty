@@ -1,8 +1,5 @@
 var mongoose = require('mongoose');
-var UserModel = require('../index');
 var config = require('config');
-var authManager = require('../../auth');
-var utils = require(ROOT_DIR + 'utils');
 var algorithm = config.get('app.cryptoAlgorithm');
 var appSecret = config.get('app.secret');
 var ObjectId = mongoose.Types.ObjectId;

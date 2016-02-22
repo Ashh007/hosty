@@ -29,7 +29,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(multer({
+/*app.use(multer({
     dest : "./uploads/",
     onFileSizeLimit : function (file) {
       console.log('Failed: ', file.originalname)
@@ -50,7 +50,7 @@ app.use(multer({
     onFilesLimit : function () {
       console.log('Crossed file limit!')
     },
-}));
+}));*/
 app.use(express.static(path.join(__dirname, 'public')));
 
 /*********domain based routing************/
@@ -60,7 +60,6 @@ for(var key in domain.domains)
 }
 /*****************************************/
 
-dbObj = require(ROOT_DIR + 'config/connection').postgres_init_master(); // db connection
 //var uri = 'mongodb://localhost:27017/nodetest2';
 //global.mongooseObj = mongoose.createConnection(uri);
 mongooseObj = require(ROOT_DIR + 'config/connection').mongo_init_master();
